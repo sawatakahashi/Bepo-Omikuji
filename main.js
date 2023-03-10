@@ -1,16 +1,23 @@
 
 let button = document.getElementById('button');
-button.addEventListener('click', ()=>{
-    const n = Math.random();
-    if (n < 0.05){
-        button.textContent="Great day!";
-    }else if (n < 0.4){
-        button.textContent="Okey Day";
-    }else{
-        button.textContent="BAAAD DAY";
-    }
 
+button.addEventListener("click", () => {
+    const results = ["Great Day!", "Happy Day", "Iffy Day", "Boring Day"];
+    const result = Math.floor(Math.random() * results.length);
+    button.textContent = results[result];
 });
+
+// button.addEventListener('click', ()=>{
+//     const n = Math.random();
+//     if (n < 0.05){
+//         button.textContent="Great day!";
+//     }else if (n < 0.4){
+//         button.textContent="Okey Day";
+//     }else{
+//         button.textContent="BAAAD DAY";
+//     }
+
+// });
 
 let snowContainer = document.querySelector(".container");
 
